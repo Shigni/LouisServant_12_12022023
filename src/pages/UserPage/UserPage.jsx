@@ -13,6 +13,7 @@ const Container = styled.div`
     grid-column: 2;
   }
 `;
+// Single page
 
 export default function UserPage() {
   return (
