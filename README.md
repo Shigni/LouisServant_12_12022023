@@ -8,6 +8,4 @@
 
 ## Authors
 
-Our code squad : Francis & Stéphane
-
 ## Licensing
