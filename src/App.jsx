@@ -16,8 +16,8 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Navigate to="/user/12" />} />
-          <Route path="*" element={<Error />} />
           <Route path="/user/:id" element={<UserPage />} />
+          <Route path="*" element={<Error />} />
         </Routes>
       </Router>
     </div>
