@@ -3,5 +3,5 @@
   width: 258px;
   background: #282d30;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
-  border-radius: 5px;
+  @include smaller-border-radius;
 }

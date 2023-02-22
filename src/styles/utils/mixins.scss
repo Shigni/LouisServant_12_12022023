@@ -8,3 +8,11 @@
     align-items: center;
     justify-content: center;
 }
+
+@mixin smaller-border-radius{
+    border-radius: 5px;
+}
+
+@mixin larger-border-radius{
+    border-radius: 6px;
+}

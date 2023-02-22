@@ -13,7 +13,7 @@
     font-weight: 500;
     font-size: 48px;
     span {
-      color: #ff0000;
+      color: $darker-red-color;
     }
   }
   p {
@@ -26,7 +26,7 @@
 
 .graph-container{
   display: flex;
-  > .graphs {
+  > .graph {
     @include flex-column;
     margin-right: 20px;
     width: 835px;
