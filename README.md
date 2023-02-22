@@ -18,13 +18,17 @@
 ## Quick installation
 
 Clone the repository
-`sh git clone https://github.com/Shigni/LouisServant_12_12022023.git `
+`git clone https://github.com/Shigni/LouisServant_12_12022023.git `
 
 install packages
-`sh npm install `
+`npm install `
 
 Start the project
-`sh npm start`
+`npm start`
+
+## BackEnd installation
+
+Follow instructions [here](https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard)
 
 ## Authors
 
