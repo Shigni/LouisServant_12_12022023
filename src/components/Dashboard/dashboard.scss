@@ -1,0 +1,54 @@
+.dashboard-container {
+  justify-self: center;
+  margin-top: 60px;
+  @media (max-width: 1248px) {
+    margin-top: 25px;
+    width: 90%;
+  }
+}
+
+.dashboard-header {
+  margin-bottom: 65px;
+  h1 {
+    font-weight: 500;
+    font-size: 48px;
+    span {
+      color: #ff0000;
+    }
+  }
+  p {
+    font-size: 18px;
+  }
+  @media (max-width: 1248px) {
+    margin-bottom: 30px;
+  }
+}
+
+.graph-container{
+  display: flex;
+  > .graphs {
+    @include flex-column;
+    margin-right: 20px;
+    width: 835px;
+  }
+  aside {
+    @include flex-column;
+    justify-content: space-between;
+  }
+  @media (max-width: 1248px) {
+    flex-direction: column;
+    > .graphs {
+      margin-right: 0;
+    }
+    aside {
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 835px;
+    }
+  }
+}
+
+.small-graph-container{
+  display: flex;
+  justify-content: space-between;
+}

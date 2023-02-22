@@ -1,0 +1,33 @@
+.errorContainer {
+    margin-top: 8%;
+    color: #ff0000;
+    @include flex-column;
+    @include flex-center
+}
+
+.errorNumber {
+    font-size: 288px;
+    font-weight: 700;
+}
+
+
+.errorText {
+    @include flex-center;
+    text-align: center;
+    margin: 0;
+}
+
+.errorLinkHome {
+	@include flex-center;
+	text-decoration: none;
+	color: #ff0000;
+	font-size: 18px;
+    font-weight: 500;
+	margin-top: 9rem;
+
+
+	&:hover,
+	&:focus {
+		text-decoration-line: underline;
+	}
+}

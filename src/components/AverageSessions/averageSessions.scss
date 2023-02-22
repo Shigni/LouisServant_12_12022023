@@ -1,0 +1,18 @@
+.title-sessions {
+    position: absolute;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 29px 34px 0 34px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.session-container {
+    position: relative;
+    width: 258px;
+    height: 263px;
+    @include flex-column;
+    justify-content: space-between;
+    background: #ff0000;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
+    border-radius: 5px;
+}

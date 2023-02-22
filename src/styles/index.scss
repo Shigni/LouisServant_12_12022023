@@ -1,0 +1,15 @@
+@import "./utils/global.scss";
+@import "./utils/mixins.scss";
+@import "./utils/variables.scss";
+
+@import "../components/AverageSessions/averageSessions.scss";
+@import "../components/AverageSessionsTooltip/averageSessionsTooltip.scss";
+@import "../components/Header/header.scss";
+@import "../components/Dashboard/dashboard.scss";
+@import "../components/ActivityTooltip/activityTooltip.scss";
+@import "../components/LeftNav/leftNav.scss";
+@import "../components/NutriInfos/nutriInfos.scss";
+@import "../components/Performance/performance.scss";
+@import "../components/Score/score.scss";
+@import "../components/Activity/activity.scss";
+@import "../components/Error/error.scss";
