@@ -8,12 +8,12 @@
 
 ## Dependencies
 
-- [React](https://reactjs.org/) v17.0.2
-- [react-router-dom](https://reactrouter.com/web/guides/quick-start) v5.2.0
-- [axios](https://github.com/axios/axios) v0.21.1
-- [recharts](https://recharts.org/en-US/) v2.0.9
-- [prop-types](https://www.npmjs.com/package/prop-types) v15.7.2
-- [styled-components](https://styled-components.com/) v5.2.3
+- [React](https://reactjs.org/) v18.2.0
+- [react-router-dom](https://reactrouter.com/web/guides/quick-start) v6.8.1
+- [axios](https://github.com/axios/axios) v1.3.3
+- [recharts](https://recharts.org/en-US/) v2.4.3
+- [prop-types](https://www.npmjs.com/package/prop-types) v15.8.1
+- [styled-components](https://styled-components.com/) v5.3.6
 
 ## Quick installation
 

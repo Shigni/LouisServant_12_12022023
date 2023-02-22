@@ -49,7 +49,7 @@ export function Dashboard() {
         <p>Félicitations ! Vous avez explosé vos objectifs hier 👏</p>
       </div>
       <div className="graph-container">
-        <div className="graphs">
+        <div className="graph">
           <Activity id={id} />
           <div className="small-graph-container">
             <AverageSessions id={id} />
