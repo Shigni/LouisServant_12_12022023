@@ -15,6 +15,7 @@ import { Performance, AverageSessions, Score, Activity, NutriInfos } from '../';
  *
  */
 
+// GetData
 export function Dashboard() {
   const [data, setData] = useState([]);
   const [score, setScore] = useState([]);
@@ -40,6 +41,7 @@ export function Dashboard() {
 
   if (data.length === 0) return null;
 
+  // Display
   return (
     <div className="dashboard-container">
       <div className="dashboard-header">
