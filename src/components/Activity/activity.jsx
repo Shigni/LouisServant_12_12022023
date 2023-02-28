@@ -10,7 +10,7 @@ import {
 } from 'recharts';
 import PropTypes from 'prop-types';
 
-import { getUserActivity } from '../../api';
+import { DashboardService } from '../../service';
 import { ActivityTooltip } from '../';
 
 /**
@@ -25,12 +25,12 @@ export function Activity({ id }) {
 
   useEffect(() => {
     const getData = async () => {
-      const request = await getUserActivity(id);
+      const request = await DashboardService.getUserActivity(id);
 
       for (let i = 0, length = request.data.sessions.length; i < length; i++) {
         request.data.sessions[i] = {
           ...request.data.sessions[i],
-          day: i + 1,
+          key: i + 1,
         };
       }
       setData(request.data.sessions);
@@ -72,7 +72,7 @@ export function Activity({ id }) {
         >
           <CartesianGrid vertical={false} strokeDasharray="2 2" />
           <Tooltip content={<ActivityTooltip />} />
-          <XAxis dataKey="day" axisLine={false} tickLine={false} />
+          <XAxis dataKey="key" axisLine={false} tickLine={false} />
           <YAxis
             yAxisId="kg"
             datakey="kilogram"

@@ -15,7 +15,7 @@ const Container = styled.div`
 `;
 // Single page
 
-export default function UserPage() {
+export function UserPage() {
   return (
     <Container>
       <LeftNav />

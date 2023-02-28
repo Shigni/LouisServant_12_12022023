@@ -8,7 +8,7 @@ import {
 } from 'recharts';
 import PropTypes from 'prop-types';
 
-import { getUserPerformance } from '../../api';
+import { DashboardService } from '../../service';
 
 /**
  * Create the "Performance" graph
@@ -22,20 +22,9 @@ export function Performance({ id }) {
 
   useEffect(() => {
     const getData = async () => {
-      const request = await getUserPerformance(id);
-
-      for (let i = 0, size = request.data.data.length; i < size; i++) {
-        request.data.data[i] = {
-          ...request.data.data[i],
-          kind:
-            request.data.kind[request.data.data[i].kind]
-              .charAt(0)
-              .toUpperCase() +
-            request.data.kind[request.data.data[i].kind].slice(1),
-        };
-      }
-
-      setData(request.data.data);
+      const performance = await DashboardService.getUserPerformance(id);
+      console.log(performance);
+      setData(performance);
     };
     getData();
   }, [id]);

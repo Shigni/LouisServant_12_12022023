@@ -9,7 +9,7 @@ import {
 } from 'recharts';
 import PropTypes from 'prop-types';
 
-import { getUserAverageSessions } from '../../api';
+import { DashboardService } from '../../service';
 import { AverageSessionsTooltip } from '../';
 
 /**
@@ -26,7 +26,7 @@ export function AverageSessions({ id }) {
 
   useEffect(() => {
     const getData = async () => {
-      const request = await getUserAverageSessions(id);
+      const request = await DashboardService.getUserAverageSessions(id);
 
       const formatedData = request.data.sessions.map((session) => {
         switch (session.day) {
