@@ -88,7 +88,7 @@ export function AverageSessions({ id }) {
           <Tooltip
             content={<AverageSessionsTooltip />}
             cursor={{
-              stroke: 'rgba(0, 0, 0, 0.1)',
+              stroke: 'rgba(0, 0, 0, 0.0)',
               strokeWidth: 50,
               height: '1000px',
             }}
