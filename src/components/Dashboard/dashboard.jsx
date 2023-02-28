@@ -5,7 +5,7 @@ import logoCarbs from '../../assets/logo-carbs.svg';
 import logoLipids from '../../assets/logo-lipids.svg';
 import { useParams } from 'react-router-dom';
 
-import { getUserInfos } from '../../api';
+import { DashboardService } from '../../service';
 import {
   Performance,
   AverageSessions,
@@ -32,7 +32,7 @@ export function Dashboard() {
 
   useEffect(() => {
     const getData = async () => {
-      const request = await getUserInfos(id);
+      const request = await DashboardService.getUserInfos(id);
 
       if (request) {
         setData(request.data);

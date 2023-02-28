@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom';
 
 import './styles/index.scss';
-import UserPage from './pages/UserPage/UserPage';
+import { UserPage } from './pages/UserPage/UserPage';
 import { Error, Header } from './components';
 
 function App() {
