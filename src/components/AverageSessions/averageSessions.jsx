@@ -26,30 +26,8 @@ export function AverageSessions({ id }) {
 
   useEffect(() => {
     const getData = async () => {
-      const request = await DashboardService.getUserAverageSessions(id);
-
-      const formatedData = request.data.sessions.map((session) => {
-        switch (session.day) {
-          case 1:
-            return { ...session, day: 'L' };
-          case 2:
-            return { ...session, day: 'M' };
-          case 3:
-            return { ...session, day: 'M' };
-          case 4:
-            return { ...session, day: 'J' };
-          case 5:
-            return { ...session, day: 'V' };
-          case 6:
-            return { ...session, day: 'S' };
-          case 7:
-            return { ...session, day: 'D' };
-
-          default:
-            return { ...session };
-        }
-      });
-      setData(formatedData);
+      const averageSessions = await DashboardService.getUserAverageSessions(id);
+      setData(averageSessions);
     };
     getData();
   }, [id]);
@@ -66,7 +44,7 @@ export function AverageSessions({ id }) {
           <XAxis
             axisLine={false}
             tickLine={false}
-            dataKey="day"
+            dataKey="dayName"
             stroke="rgba(255, 255, 255, 0.5)"
             tick={{ fontSize: 12 }}
             minTickGap={3}
