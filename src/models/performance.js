@@ -15,7 +15,7 @@ export class PerformanceParser {
       };
       result.push(performance);
     });
-    console.log(result);
+
     return result;
   }
 }

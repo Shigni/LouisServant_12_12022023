@@ -22,9 +22,9 @@ export function Performance({ id }) {
 
   useEffect(() => {
     const getData = async () => {
-      const performance = await DashboardService.getUserPerformance(id);
-      console.log(performance);
-      setData(performance);
+      const performances = await DashboardService.getUserPerformance(id);
+
+      setData(performances);
     };
     getData();
   }, [id]);
