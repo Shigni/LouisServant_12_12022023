@@ -25,15 +25,8 @@ export function Activity({ id }) {
 
   useEffect(() => {
     const getData = async () => {
-      const request = await DashboardService.getUserActivity(id);
-
-      for (let i = 0, length = request.data.sessions.length; i < length; i++) {
-        request.data.sessions[i] = {
-          ...request.data.sessions[i],
-          key: i + 1,
-        };
-      }
-      setData(request.data.sessions);
+      const activities = await DashboardService.getUserActivity(id);
+      setData(activities);
     };
     getData();
   }, [id]);

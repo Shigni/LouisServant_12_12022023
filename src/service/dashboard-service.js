@@ -1,5 +1,9 @@
 import axios from 'axios';
-import { PerformanceParser } from '../models';
+import {
+  PerformanceParser,
+  ActivityParser,
+  AverageSessionsParser,
+} from '../models';
 
 const instance = axios.create({
   baseURL: 'http://localhost:3000/user',
@@ -45,7 +49,7 @@ export class DashboardService {
   static getUserActivity = async (id) => {
     try {
       const res = await instance.get(`/${id}/activity`);
-      return res.data;
+      return ActivityParser.parse(res.data.data.sessions);
     } catch (e) {
       console.log(e);
     }
@@ -60,7 +64,7 @@ export class DashboardService {
   static getUserAverageSessions = async (id) => {
     try {
       const res = await instance.get(`/${id}/average-sessions`);
-      return res.data;
+      return AverageSessionsParser.parse(res.data.data.sessions);
     } catch (e) {
       console.log(e);
     }
